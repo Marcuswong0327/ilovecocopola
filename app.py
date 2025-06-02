@@ -2,10 +2,16 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import joblib
+import gzip
+import joblib
+
+with gzip.open("randomforest.pkl.gz", "rb") as f:
+    model = joblib.load(f)
+
 
 # Load model and scaler
-model = joblib.load("randomforest_compressed.pkl")
 scaler = joblib.load("scaler.pkl")
+
 
 st.set_page_config(page_title="Resignation Prediction", layout="centered")
 st.title("💼 Employee Resignation Prediction App")
