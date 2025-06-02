@@ -21,7 +21,6 @@ training_hours = st.slider("Training Hours", 0, 100, 20)
 promotions = st.slider("Number of Promotions", 0, 10, 1)
 satisfaction = st.slider("Employee Satisfaction Score", 0.0, 1.0, 0.5)
 
-
 # Prediction button
 if st.button("Predict Resignation"):
     features = np.array([[years_at_company, performance_score, monthly_salary,
@@ -41,5 +40,4 @@ if st.button("Predict Resignation"):
     else:
         st.success("✅ Low Risk: Likely to Stay")
 
-    # st.metric("Resignation Probability", f"{prob:.2%}")
     st.metric(label="Resignation Probability", value=f"{prob:.2%}")
