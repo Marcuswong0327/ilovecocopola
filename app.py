@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load model and scaler
-model = joblib.load("random_forest_model.pkl")
+model = joblib.load("randomforest_compressed.pkl")
 scaler = joblib.load("scaler.pkl")
 
 st.set_page_config(page_title="Resignation Prediction", layout="centered")
