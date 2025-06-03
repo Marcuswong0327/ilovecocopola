@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load model and scaler
-model = joblib.load("random_forest_model (1).pkl")
+model = joblib.load("random_forest_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
 st.set_page_config(page_title="Resignation Prediction", layout="centered")
@@ -13,7 +13,7 @@ st.title("💼 Employee Resignation Prediction App")
 st.header("🔍 Input Employee Information")
 
 # User input features
-ge = st.slider("Age", 18, 65, 30)
+age = st.slider("Age", 18, 65, 30)
 work_hours = st.slider("Work Hours per Week", 0, 80, 40)
 projects_handled = st.slider("Projects Handled", 0, 50, 5)
 training_hours = st.slider("Training Hours", 0, 100, 20)
